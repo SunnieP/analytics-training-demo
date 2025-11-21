@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Analytics Demo</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <!-- Font Awesome for the cart icon (assuming available/standard) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>
+<body>
+    <!-- HEADER REPLACED WITH UNIFIED STRUCTURE -->
+    <header class="header">
+        <div class="logo">Velvet &amp; Sage Lab</div>
+        <div class="header-right">
+            <nav class="nav">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="shop.html" class="active">Shop</a>
+                <a href="resources.html">Resources</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <!-- NEW CART ICON LINK -->
+            <a href="checkout.html" class="cart-icon" id="cart-nav-icon" title="View Cart">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count" id="nav-cart-count">0</span>
+            </a>
+            <!-- END NEW CART ICON LINK -->
+        </div>
+    </header>
+    <!-- END HEADER -->
+
+    <main class="page-content">
+        <div class="container">
+            <h1>Training Products</h1>
+            <p class="subtitle">Practice e-commerce event tracking with these demo products</p>
+            
+            <div class="product-grid">
+                <div class="product-card" data-product-id="prod_001" data-product-name="GA4 Fundamentals Course" data-product-price="99.00" data-product-category="courses">
+                    <div class="product-image">📊</div>
+                    <h3>GA4 Fundamentals Course</h3>
+                    <p class="product-category">Courses</p>
+                    <p class="product-description">Master the basics of Google Analytics 4 with hands-on exercises</p>
+                    <p class="product-price">$99.00</p>
+                    <button class="btn-primary add-to-cart" data-product-id="prod_001">Add to Cart</button>
+                    <a href="product.html?id=prod_001" class="btn-secondary">View Details</a>
+                </div>
+                
+                <div class="product-card" data-product-id="prod_002" data-product-name="GTM Implementation Guide" data-product-price="49.00" data-product-category="guides">
+                    <div class="product-image">📘</div>
+                    <h3>GTM Implementation Guide</h3>
+                    <p class="product-category">Guides</p>
+                    <p class="product-description">Step-by-step guide to Google Tag Manager setup and configuration</p>
+                    <p class="product-price">$49.00</p>
+                    <button class="btn-primary add-to-cart" data-product-id="prod_002">Add to Cart</button>
+                    <a href="product.html?id=prod_002" class="btn-secondary">View Details</a>
+                </div>
+                
+                <div class="product-card" data-product-id="prod_003" data-product-name="E-commerce Tracking Template" data-product-price="79.00" data-product-category="templates">
+                    <div class="product-image">🛒</div>
+                    <h3>E-commerce Tracking Template</h3>
+                    <p class="product-category">Templates</p>
+                    <p class="product-description">Pre-configured GTM container for e-commerce tracking</p>
+                    <p class="product-price">$79.00</p>
+                    <button class="btn-primary add-to-cart" data-product-id="prod_003">Add to Cart</button>
+                    <a href="product.html?id=prod_003" class="btn-secondary">View Details</a>
+                </div>
+                
+                <div class="product-card" data-product-id="prod_004" data-product-name="Advanced Event Tracking Workshop" data-product-price="149.00" data-product-category="courses">
+                    <div class="product-image">🎯</div>
+                    <h3>Advanced Event Tracking Workshop</h3>
+                    <p class="product-category">Courses</p>
+                    <p class="product-description">Deep dive into custom events, parameters, and user properties</p>
+                    <p class="product-price">$149.00</p>
+                    <button class="btn-primary add-to-cart" data-product-id="prod_004">Add to Cart</button>
+                    <a href="product.html?id=prod_004" class="btn-secondary">View Details</a>
+                </div>
+                
+                <div class="product-card" data-product-id="prod_005" data-product-name="Data Layer Debugging Toolkit" data-product-price="29.00" data-product-category="tools">
+                    <div class="product-image">🔧</div>
+                    <h3>Data Layer Debugging Toolkit</h3>
+                    <p class="product-category">Tools</p>
+                    <p class="product-description">Chrome extension and utilities for debugging GTM implementations</p>
+                    <p class="product-price">$29.00</p>
+                    <button class="btn-primary add-to-cart" data-product-id="prod_005">Add to Cart</button>
+                    <a href="product.html?id=prod_005" class="btn-secondary">View Details</a>
+                </div>
+                
+                <div class="product-card" data-product-id="prod_006" data-product-name="Complete Analytics Bundle" data-product-price="299.00" data-product-category="bundles">
+                    <div class="product-image">📦</div>
+                    <h3>Complete Analytics Bundle</h3>
+                    <p class="product-category">Bundles</p>
+                    <p class="product-description">All courses, guides, and templates in one comprehensive package</p>
+                    <p class="product-price">$299.00</p>
+                    <span class="badge">Best Value</span>
+                    <button class="btn-primary add-to-cart" data-product-id="prod_006">Add to Cart</button>
+                    <a href="product.html?id=prod_006" class="btn-secondary">View Details</a>
+                </div>
+            </div>
+            
+            <div id="cart-notification" class="cart-notification hidden">
+                <p>Item added to cart!</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Analytics Training Demo. Built for educational purposes.</p>
+            <div class="social-links">
+                <a href="https://twitter.com" target="_blank" rel="noopener" class="external-link">Twitter</a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener" class="external-link">LinkedIn</a>
+                <a href="https://github.com" target="_blank" rel="noopener" class="external-link">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/app.js"></script>
+</body>
+</html>

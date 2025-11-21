@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Analytics Demo</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <!-- Font Awesome for Cart Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    </head>
+<body>
+    <!-- HEADER REPLACED WITH UNIFIED STRUCTURE -->
+    <header class="header">
+        <div class="logo">Velvet &amp; Sage Lab</div>
+        <div class="header-right">
+            <nav class="nav">
+                <a href="index.html">Home</a>
+                <a href="about.html" class="active">About</a>
+                <a href="shop.html">Shop</a>
+                <a href="resources.html">Resources</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <!-- CART ICON ADDED -->
+            <a href="checkout.html" class="cart-icon" id="cart-nav-icon" title="View Cart">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count" id="nav-cart-count">0</span>
+            </a>
+        </div>
+    </header>
+    <!-- END HEADER -->
+
+    <main class="page-content">
+        <div class="container">
+            <h1>About This Training Site</h1>
+            
+            <section class="content-section">
+                <h2>Purpose</h2>
+                <p>This demo site is designed to teach Google Analytics 4 and Google Tag Manager implementation in a real-world environment. Unlike platform-specific builders, this gives you complete control over the tracking implementation.</p>
+            </section>
+
+            <section class="content-section">
+                <h2>What Makes This Different?</h2>
+                <ul>
+                    <li>Full access to HTML head and body tags</li>
+                    <li>Clean, semantic markup for reliable CSS selectors</li>
+                    <li>Real forms, buttons, and interactive elements</li>
+                    <li>Ability to intentionally break tracking for debugging practice</li>
+                    <li>Version control through GitHub for audit trails</li>
+                </ul>
+            </section>
+
+            <section class="content-section">
+                <h2>Training Scenarios</h2>
+                <div class="scenario-grid">
+                    <div class="scenario-card">
+                        <h3>Scenario 1: Basic Setup</h3>
+                        <p>Install GTM container, verify pageviews, configure basic events</p>
+                        <button class="btn btn-small btn-primary" data-scenario="basic-setup">Mark Complete</button>
+                    </div>
+                    <div class="scenario-card">
+                        <h3>Scenario 2: Form Tracking</h3>
+                        <p>Track newsletter signups and contact form submissions</p>
+                        <button class="btn btn-small btn-primary" data-scenario="form-tracking">Mark Complete</button>
+                    </div>
+                    <div class="scenario-card">
+                        <h3>Scenario 3: E-commerce Events</h3>
+                        <p>Implement view_item, add_to_cart, and purchase events</p>
+                        <button class="btn btn-small btn-primary" data-scenario="ecommerce">Mark Complete</button>
+                    </div>
+                    <div class="scenario-card">
+                        <h3>Scenario 4: File Downloads</h3>
+                        <p>Track PDF downloads and resource engagement</p>
+                        <button class="btn btn-small btn-primary" data-scenario="downloads">Mark Complete</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="cta-section">
+                <h2>Ready to Get Started?</h2>
+                <a href="contact.html" class="btn-primary">Contact Us</a>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Analytics Training Demo. Built for educational purposes.</p>
+            <div class="social-links">
+                <a href="https://twitter.com" target="_blank" rel="noopener" class="external-link">Twitter</a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener" class="external-link">LinkedIn</a>
+                <a href="https://github.com" target="_blank" rel="noopener" class="external-link">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/app.js"></script>
+</body>
+</html>

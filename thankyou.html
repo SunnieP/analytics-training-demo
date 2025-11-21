@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - Analytics Demo</title>
+    <link rel="stylesheet" href="assets/style.css">
+    
+    </head>
+<body>
+    <!-- HEADER REPLACED WITH UNIFIED STRUCTURE -->
+    <header class="header">
+        <div class="logo">Velvet &amp; Sage Lab</div>
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="shop.html">Shop</a>
+            <a href="resources.html">Resources</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <!-- END HEADER -->
+
+    <main class="page-content thankyou-page">
+        <div class="container">
+            <div class="thankyou-content">
+                <div class="success-icon">✓</div>
+                <h1>Thank You!</h1>
+                <p class="subtitle">Your order has been successfully processed</p>
+                
+                <div class="order-summary" id="order-summary">
+                    <h2>Order Summary</h2>
+                    <p><strong>Order Number:</strong> <span id="order-number">ORD-2024-001</span></p>
+                    <p><strong>Total:</strong> <span id="order-total">$99.00</span></p>
+                    <p>A confirmation email has been sent to your inbox.</p>
+                </div>
+                
+                <div class="next-steps">
+                    <h2>What's Next?</h2>
+                    <div class="step-grid">
+                        <div class="step-card">
+                            <h3>1. Check Your Email</h3>
+                            <p>You'll receive a confirmation with access instructions</p>
+                        </div>
+                        <div class="step-card">
+                            <h3>2. Access Your Content</h3>
+                            <p>Login to your account to start learning immediately</p>
+                        </div>
+                        <div class="step-card">
+                            <h3>3. Join the Community</h3>
+                            <p>Connect with other students in our forums</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cta-buttons">
+                    <a href="shop.html" class="btn-primary">Continue Shopping</a>
+                    <a href="index.html" class="btn-secondary">Back to Home</a>
+                </div>
+                
+                <div class="training-note">
+                    <p><strong>Training Note:</strong> This is where you'd fire a purchase event with transaction data. Use this page to practice tracking successful conversions!</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Analytics Training Demo. Built for educational purposes.</p>
+            <div class="social-links">
+                <a href="https://twitter.com" target="_blank" rel="noopener" class="external-link">Twitter</a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener" class="external-link">LinkedIn</a>
+                <a href="https://github.com" target="_blank" rel="noopener" class="external-link">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/app.js"></script>
+    <script>
+        // Simulate purchase data from URL params or sessionStorage
+        window.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const orderNum = urlParams.get('order') || 'ORD-' + Date.now();
+            const total = urlParams.get('total') || '99.00';
+            
+            document.getElementById('order-number').textContent = orderNum;
+            document.getElementById('order-total').textContent = '$' + total;
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Analytics Training Demo – Master GA4 & GTM</title>
+  <meta name="description" content="Professional analytics training environment for learning GA4, GTM, and conversion tracking." />
+  <link rel="stylesheet" href="assets/style.css" />
+  <!-- Font Awesome for Cart Icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">Velvet &amp; Sage Lab</div>
+    <div class="header-right">
+        <nav class="nav">
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="shop.html">Shop</a>
+            <a href="resources.html">Resources</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <!-- CART ICON ADDED -->
+        <a href="checkout.html" class="cart-icon" id="cart-nav-icon" title="View Cart">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count" id="nav-cart-count">0</span>
+        </a>
+    </div>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Level Up Your Analytics Skills</h1>
+        <p>Master GA4, GTM, and conversion tracking with real-world scenarios. Practice events, forms, downloads, ecommerce flows, and debugging in a fully controlled environment.</p>
+        <button id="hero-cta" class="btn-primary" data-cta="hero_get_started" data-location="hero">Get Started</button>
+      </div>
+      <div class="hero-img">
+        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Analytics Dashboard" loading="lazy" />
+      </div>
+    </section>
+    
+    <section class="cards-section">
+      <h2>Training Modules</h2>
+      <div class="card-grid">
+        <a href="shop.html" class="card" data-card-type="ecommerce">
+          <h3>🛒 Ecommerce Tracking</h3>
+          <p>Practice view_item, add_to_cart, begin_checkout, and purchase events. Simulate real shopping flows.</p>
+        </a>
+        <a href="resources.html" class="card" data-card-type="downloads">
+          <h3>📥 Download Tracking</h3>
+          <p>Track PDF downloads, file clicks, and outbound links. Perfect for lead generation tracking.</p>
+        </a>
+        <a href="contact.html" class="card" data-card-type="forms">
+          <h3>📝 Form Submissions</h3>
+          <p>Test form_start, form_submit, and conversion events with validation and thank-you pages.</p>
+        </a>
+        <a href="about.html" class="card" data-card-type="engagement">
+          <h3>⚡ User Engagement</h3>
+          <p>Learn scroll tracking, time on page, video plays, and interaction events.</p>
+        </a>
+        <a href="product.html" class="card" data-card-type="product">
+          <h3>🎯 Product Views</h3>
+          <p>Practice enhanced ecommerce with product impressions, clicks, and detail views.</p>
+        </a>
+        <div class="card" data-card-type="debugging">
+          <h3>🔧 Debugging Practice</h3>
+          <p>Break and fix tracking setups. Learn to diagnose GTM issues like a pro.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cards-section">
+      <h2>Advanced Tracking Scenarios</h2>
+      <div class="card-grid">
+        <a href="product.html?variant=premium" class="card" data-card-type="custom_data_layer">
+          <h3>📦 Custom Data Layer Events</h3>
+          <p>Practice pushing custom events and data layer variables for complex, non-standard interactions (e.g., subscription upgrades, internal promotions).</p>
+        </a>
+        <a href="contact.html?utm_source=home_promo" class="card" data-card-type="cross_domain">
+          <h3>🔗 Cross-Domain Linking</h3>
+          <p>Learn to configure linker parameters for tracking user journeys across multiple related domains or subdomains in GA4.</p>
+        </a>
+        <a href="resources.html" class="card" data-card-type="video_tracking">
+          <h3>▶️ Video Engagement Tracking</h3>
+          <p>Implement tracking for video plays, pause, progress (25%, 50%, 75%), and completion using JavaScript events.</p>
+        </a>
+        <a href="about.html" class="card" data-card-type="cookie_consent">
+          <h3>🔐 Consent Mode Integration</h3>
+          <p>Simulate user consent updates and understand how to properly integrate Google Consent Mode with your GTM tags.</p>
+        </a>
+      </div>
+    </section>
+    
+    <section class="scroll-demo">
+      <h2>Scroll Depth Playground</h2>
+      <p style="text-align: center; color: #6B7280; max-width: 700px; margin: 0 auto 2rem;">
+        Scroll through this content to trigger scroll depth events at 25%, 50%, 75%, and 90%. Perfect for testing engagement tracking.
+      </p>
+      <div class="scroll-content" style="height: 1200px; padding: 3rem; background: linear-gradient(180deg, #FFFFFF, #F5F5F7);">
+        <h3>Why Scroll Tracking Matters</h3>
+        <p>Scroll depth is a key indicator of content engagement...</p>
+        <div style="height: 400px; display: flex; align-items: center; justify-content: center; background: var(--secondary); border-radius: var(--radius); margin: 2rem 0;">
+          <p style="font-size: 1.5rem; font-weight: 600;">🎯 50% Checkpoint</p>
+        </div>
+        <p>Almost there! Continue scrolling to reach the 75% and 90% markers.</p>
+        <div style="height: 300px; display: flex; align-items: center; justify-content: center; background: var(--accent); color: white; border-radius: var(--radius); margin: 2rem 0;">
+          <p style="font-size: 1.5rem; font-weight: 600;">✨ 90% Complete!</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <p>© 2025 Velvet & Sage Analytics Training Demo | Built for GA4 & GTM Mastery</p>
+  </footer>
+  <script src="assets/app.js"></script>
+</body>
+</html>

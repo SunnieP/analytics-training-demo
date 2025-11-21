@@ -1,0 +1,771 @@
+/* --- CSS for Analytics Training Demo Site (Velvet & Sage Dark Mode) --- */
+
+/* 1. Variables and Global Reset */
+:root {
+    /* Velvet & Sage – Dark Luxury Palette */
+    --primary: #120F19;          /* Deep velvet (header, major surfaces) */
+    --secondary: #9CB89C;        /* Sage (links, headings, accents) */
+    --accent: #D9A85E;           /* Soft gold (primary CTAs, highlights) */
+    --danger: #E76A5F;           /* Warm red for alerts/badges */
+
+    --background-light: #05060A; /* Main page background */
+    --background-dark: #181523;  /* Panels / cards / sections */
+    --text-color: #E5E7EB;       /* Main text color */
+
+    --radius: 14px;
+    --shadow: 0 18px 40px rgba(0, 0, 0, 0.55);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background: radial-gradient(circle at top left, #1F1B2A 0%, #05060A 55%, #020308 100%);
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem 3rem;
+}
+
+/* 2. Header and Navigation (Unified .header, .nav, .logo classes) */
+.header, .navbar { 
+    background: rgba(10, 9, 16, 0.96);
+    backdrop-filter: blur(18px);
+    color: white;
+    padding: 0.9rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(217, 168, 94, 0.28);
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.35rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.nav, .nav-links { 
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.nav a, .nav-links a {
+    color: #E5E7EB;
+    text-decoration: none;
+    margin-left: 1.5rem;
+    padding: 0.4rem 0;
+    transition: color 0.25s, border-bottom 0.25s, opacity 0.2s;
+    border-bottom: 2px solid transparent;
+    font-size: 0.9rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    opacity: 0.9;
+}
+
+.nav a:hover,
+.nav a.active,
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--secondary);
+    border-bottom: 2px solid var(--accent);
+    opacity: 1;
+}
+
+/* Cart Icon */
+.cart-icon {
+    margin-left: 1.5rem;
+    color: #F9FAFB;
+    text-decoration: none;
+    font-size: 1.4rem;
+    padding: 0.4rem;
+    position: relative;
+    transition: color 0.2s, transform 0.15s;
+}
+
+.cart-icon:hover {
+    color: var(--accent);
+    transform: translateY(-1px);
+}
+
+.cart-count {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: var(--danger);
+    color: white;
+    border-radius: 50%;
+    padding: 0.1rem 0.45rem;
+    font-size: 0.75rem;
+    font-weight: bold;
+    min-width: 20px;
+    text-align: center;
+    line-height: 1.2;
+}
+
+/* 3. Hero Section (index.html specific) */
+.hero {
+    background: radial-gradient(circle at top left, #28213B 0%, #120F19 45%, #05060A 100%);
+    color: white;
+    padding: 3.5rem 1.5rem;
+    border-radius: var(--radius);
+    margin: 2.5rem 0 3.5rem;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(217, 168, 94, 0.25);
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero h1 {
+    font-size: 2.6rem;
+    margin-bottom: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.hero p {
+    font-size: 1rem;
+    margin-bottom: 1.75rem;
+    opacity: 0.95;
+    max-width: 480px;
+    color: #D1D5DB;
+}
+
+.hero-img {
+    flex: 1;
+    max-width: 50%;
+}
+
+.hero-img img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(148, 163, 184, 0.4);
+}
+
+/* 4. Global Buttons */
+.btn, 
+.btn-primary, 
+.btn-secondary, 
+.btn-success, 
+.btn-small, 
+.btn-large {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    text-decoration: none;
+    border: none;
+    border-radius: 999px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.22s ease-out;
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+/* Primary Button (gold gradient) */
+.btn-primary, 
+.btn {
+    background: linear-gradient(135deg, var(--accent), #F5C66F);
+    color: #120F19;
+    box-shadow: 0 14px 40px rgba(217, 168, 94, 0.55);
+}
+
+.btn-primary:hover, 
+.btn:hover {
+    background: linear-gradient(135deg, #C7903F, var(--accent));
+    color: #05060A;
+    transform: translateY(-2px);
+    box-shadow: 0 18px 55px rgba(217, 168, 94, 0.7);
+}
+
+/* Secondary Button (sage outline / panel) */
+.btn-secondary {
+    background: transparent;
+    color: var(--secondary);
+    border-radius: var(--radius);
+    padding: 0.75rem 1.6rem;
+    font-weight: 500;
+    border: 1px solid rgba(156, 184, 156, 0.7);
+}
+
+.btn-secondary:hover {
+    background: rgba(156, 184, 156, 0.12);
+    transform: translateY(-1px);
+}
+
+/* Success Button (sage solid) */
+.btn-success {
+    background-color: var(--secondary);
+    color: #05060A;
+    box-shadow: 0 10px 26px rgba(156, 184, 156, 0.55);
+}
+
+.btn-success:hover {
+    background-color: #7FA38B;
+    transform: translateY(-2px);
+}
+
+/* Size Modifiers */
+.btn-small {
+    padding: 0.5rem 1.1rem;
+    font-size: 0.85rem;
+    border-radius: var(--radius);
+}
+
+.btn-large {
+    padding: 1rem 2.75rem;
+    font-size: 1.05rem;
+}
+
+/* 5. Card Sections (Training Modules & Advanced Scenarios) */
+.cards-section {
+    padding: 2rem 0;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.cards-section h2 {
+    font-size: 1.4rem;
+    color: #CBD5F5;
+    margin-bottom: 1rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    opacity: 0.9;
+}
+
+.cards-section .subtitle {
+    color: #9CA3AF;
+    font-size: 0.96rem;
+    max-width: 620px;
+    margin: 0 auto 2rem;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.6rem;
+}
+
+.card {
+    display: block;
+    background: radial-gradient(circle at top left, #211B30 0%, #151423 70%);
+    padding: 1.5rem 1.6rem;
+    border-radius: var(--radius);
+    text-align: left;
+    box-shadow: var(--shadow);
+    text-decoration: none;
+    color: var(--text-color);
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out, border 0.2s;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+    position: relative;
+    overflow: hidden;
+}
+
+.card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top right, rgba(217, 168, 94, 0.2), transparent 60%);
+    opacity: 0;
+    transition: opacity 0.22s ease-out;
+}
+
+.card:hover::after {
+    opacity: 1;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+    border-color: rgba(217, 168, 94, 0.7);
+}
+
+.card h3 {
+    font-size: 1.2rem;
+    color: var(--secondary);
+    margin-bottom: 0.45rem;
+}
+
+.card p {
+    color: #9CA3AF;
+    font-size: 0.93rem;
+}
+
+/* 6. Page Content Wrapper */
+.page-content {
+    padding: 3rem 1rem;
+    min-height: calc(100vh - 220px);
+}
+
+/* 7. Product Grid and Cards (.shop.html) */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.product-card {
+    background: #14131E;
+    border-radius: var(--radius);
+    padding: 1.6rem 1.5rem 1.7rem;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s, box-shadow 0.2s, border 0.2s;
+    position: relative;
+    text-align: center;
+    border: 1px solid rgba(75, 85, 99, 0.7);
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 55px rgba(0, 0, 0, 0.75);
+    border-color: rgba(217, 168, 94, 0.8);
+}
+
+.product-image {
+    font-size: 3.8rem;
+    margin-bottom: 1rem;
+}
+
+.product-card h3 {
+    color: #F9FAFB;
+    margin-bottom: 0.35rem;
+    font-size: 1.2rem;
+}
+
+.product-category {
+    color: #9CA3AF;
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+}
+
+.product-description {
+    color: #D1D5DB;
+    margin-bottom: 1rem;
+    min-height: 40px;
+    font-size: 0.92rem;
+}
+
+.product-price {
+    font-size: 1.5rem;
+    color: var(--accent);
+    font-weight: 700;
+    margin: 1rem 0 0.6rem;
+}
+
+.product-card .btn-primary, 
+.product-card .btn-secondary {
+    width: 48%; 
+    margin-top: 0.75rem;
+    display: inline-block;
+    padding: 0.7rem 1rem;
+    border-radius: var(--radius);
+    font-weight: 500;
+}
+
+.product-card .btn-secondary {
+    margin-left: 0.35rem;
+}
+
+/* Badge */
+.badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: linear-gradient(135deg, #E76A5F, #F97373);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* 8. Product Detail (.product.html) */
+.product-detail-layout {
+    display: grid;
+    grid-template-columns: 1.2fr 2fr;
+    gap: 3rem;
+    margin-top: 2rem;
+    background: #14131E;
+    padding: 2rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(148, 163, 184, 0.6);
+}
+
+.product-icon {
+    font-size: 6rem;
+    background: radial-gradient(circle at top left, #262137, #14131E);
+    padding: 2rem;
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-price-large {
+    font-size: 2.4rem;
+    color: var(--accent);
+    font-weight: 700;
+    margin: 1rem 0;
+}
+
+.product-description-full {
+    margin: 1.5rem 0 1rem;
+    color: #E5E7EB;
+}
+
+.product-description-full h3 {
+    color: var(--secondary);
+    margin-top: 1.3rem;
+    margin-bottom: 0.6rem;
+}
+
+.product-actions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 1.75rem;
+}
+
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.quantity-selector label {
+    font-weight: 500;
+    color: var(--secondary);
+}
+
+.quantity-selector input {
+    width: 60px;
+    padding: 0.5rem;
+    border: 1px solid #4B5563;
+    border-radius: 8px;
+    text-align: center;
+    background: #05060A;
+    color: var(--text-color);
+}
+
+/* 9. Forms (.contact.html & checkout) */
+.contact-layout {
+    display: grid;
+    grid-template-columns: 2fr 1.1fr;
+    gap: 2.5rem;
+    margin-top: 2rem;
+}
+
+.contact-form-section {
+    background: #14131E;
+    padding: 2rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(148, 163, 184, 0.6);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+}
+
+.form-group label {
+    font-weight: 500;
+    color: var(--secondary);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 0.75rem;
+    border: 1px solid #4B5563;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    background-color: #05060A;
+    color: var(--text-color);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--secondary);
+    box-shadow: 0 0 0 1px rgba(156, 184, 156, 0.5);
+}
+
+.contact-info {
+    background: radial-gradient(circle at top left, #262137, #14131E);
+    padding: 2rem;
+    border-radius: var(--radius);
+    border: 1px solid rgba(217, 168, 94, 0.4);
+    color: #E5E7EB;
+}
+
+.info-block {
+    background-color: rgba(15, 23, 42, 0.7);
+    padding: 1.4rem;
+    border-radius: 10px;
+    margin-top: 1.8rem;
+}
+
+/* 10. Resources (.resources.html) */
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.resource-card {
+    background: #14131E;
+    border-radius: var(--radius);
+    padding: 1.8rem 1.7rem;
+    box-shadow: var(--shadow);
+    text-align: left;
+    transition: transform 0.2s, box-shadow 0.2s, border 0.2s;
+    border: 1px solid rgba(148, 163, 184, 0.6);
+}
+
+.resource-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.75);
+    border-color: rgba(217, 168, 94, 0.8);
+}
+
+.resource-icon {
+    font-size: 2.4rem;
+    margin-bottom: 0.8rem;
+}
+
+.resource-meta {
+    color: #9CA3AF;
+    font-size: 0.88rem;
+    margin: 0.6rem 0 1rem;
+}
+
+/* 11. About Page (.about.html) */
+.content-section {
+    background: #14131E;
+    padding: 2rem;
+    border-radius: var(--radius);
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(148, 163, 184, 0.6);
+}
+
+.scenario-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.scenario-card {
+    background: #101019;
+    padding: 1.4rem 1.5rem;
+    border-radius: var(--radius);
+    border-left: 4px solid var(--secondary);
+    color: #E5E7EB;
+}
+
+/* 12. Thank You Page (.thankyou.html) */
+.thankyou-page {
+    padding: 3.5rem 1rem;
+}
+
+.thankyou-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    background: #14131E;
+    padding: 3rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(217, 168, 94, 0.5);
+}
+
+.success-icon {
+    font-size: 4.5rem;
+    color: var(--accent);
+    background: radial-gradient(circle at top left, #3B2C1B, #1A1710);
+    width: 115px;
+    height: 115px;
+    line-height: 115px;
+    border-radius: 999px;
+    margin: 0 auto 1.8rem;
+}
+
+.order-summary {
+    background-color: #05060A;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin: 1.4rem 0;
+    text-align: left;
+    border: 1px solid #4B5563;
+}
+
+.next-steps {
+    margin: 2.6rem 0 0;
+}
+
+.step-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 1.4rem;
+    margin-top: 1.4rem;
+}
+
+.step-card {
+    background-color: #101019;
+    padding: 1rem 1.1rem;
+    border-radius: 8px;
+    text-align: left;
+    border: 1px solid rgba(75, 85, 99, 0.7);
+}
+
+.training-note {
+    background-color: #1E293B;
+    border: 1px solid #FBBF24;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 2.6rem;
+    color: #F9FAFB;
+}
+
+/* 13. Global Utility Styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.subtitle {
+    color: #9CA3AF;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+.back-link {
+    display: inline-block;
+    color: var(--secondary);
+    text-decoration: none;
+    margin-bottom: 1.4rem;
+    transition: color 0.2s;
+    font-weight: 500;
+}
+
+.back-link:hover {
+    color: #B4D1B4;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+/* 14. Footer */
+.footer {
+    background-color: #05060A;
+    color: #9CA3AF;
+    text-align: center;
+    padding: 1.7rem 0 2rem;
+    margin-top: 3.5rem;
+    border-top: 1px solid rgba(31, 41, 55, 0.8);
+    font-size: 0.85rem;
+}
+
+/* 15. Responsiveness */
+@media (max-width: 900px) {
+    .hero,
+    .product-detail-layout,
+    .contact-layout {
+        grid-template-columns: 1fr;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero-img {
+        max-width: 80%;
+        margin: 1.75rem auto 0;
+    }
+
+    .hero-text {
+        order: 1;
+    }
+
+    .hero-img {
+        order: 2;
+    }
+
+    .header, .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.55rem;
+    }
+    
+    .nav, .nav-links {
+        margin-top: 0.65rem;
+        flex-direction: column;
+        gap: 0.45rem;
+    }
+    
+    .nav a, .nav-links a {
+        margin: 0;
+        padding: 0.4rem 0;
+    }
+
+    .card-grid, 
+    .product-grid, 
+    .resources-grid, 
+    .scenario-grid, 
+    .step-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-card .btn-primary, 
+    .product-card .btn-secondary {
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 0.55rem;
+    }
+}

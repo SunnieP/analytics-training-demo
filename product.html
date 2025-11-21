@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - Analytics Demo</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <!-- Font Awesome for Cart Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    </head>
+<body>
+    <!-- HEADER REPLACED WITH UNIFIED STRUCTURE -->
+    <header class="header">
+        <div class="logo">Velvet &amp; Sage Lab</div>
+        <div class="header-right">
+            <nav class="nav">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="shop.html" class="active">Shop</a>
+                <a href="resources.html">Resources</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <!-- CART ICON ADDED -->
+            <a href="checkout.html" class="cart-icon" id="cart-nav-icon" title="View Cart">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count" id="nav-cart-count">0</span>
+            </a>
+        </div>
+    </header>
+    <!-- END HEADER -->
+
+    <main class="page-content">
+        <div class="container">
+            <a href="shop.html" class="back-link">← Back to Shop</a>
+            
+            <!-- data-product-id is used as a fallback. JS will update the ID based on URL -->
+            <div class="product-detail" id="product-detail"> 
+                <div class="product-detail-layout">
+                    <div class="product-detail-image">
+                        <!-- Content will be replaced by JS based on Product ID -->
+                        <div class="product-icon">...</div> 
+                    </div>
+                    
+                    <div class="product-detail-info">
+                        <h1 id="product-title">Loading Product...</h1>
+                        <p class="product-category" id="product-category">...</p>
+                        <p class="product-price-large" id="product-price">$0.00</p>
+                        
+                        <div class="product-description-full">
+                            <h3>Description</h3>
+                            <p id="product-description">Loading product description...</p>
+                            
+                            <h3>What You'll Learn / Details</h3>
+                            <!-- This list is dynamically populated by JS -->
+                            <ul> 
+                                <!-- JS items go here -->
+                            </ul>
+                        </div>
+                        
+                        <div class="product-actions">
+                            <div class="quantity-selector">
+                                <label for="quantity">Quantity:</label>
+                                <input type="number" id="quantity" min="1" max="10" value="1">
+                            </div>
+                            <!-- FIXED: Standardizing button classes for robustness -->
+                            <button class="btn-primary btn-large add-to-cart" id="add-to-cart-detail">Add to Cart</button>
+                            <button class="btn-success btn-large" id="buy-now">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- RELATED PRODUCTS remain static for now (or until next update) -->
+            <section class="related-products">
+                <h2>You May Also Like</h2>
+                <div class="product-grid">
+                    <div class="product-card" data-product-id="prod_002">
+                        <div class="product-image">📘</div>
+                        <h3>GTM Implementation Guide</h3>
+                        <p class="product-price">$49.00</p>
+                        <a href="product.html?id=prod_002" class="btn-secondary">View Details</a>
+                    </div>
+                    <div class="product-card" data-product-id="prod_004">
+                        <div class="product-image">🎯</div>
+                        <h3>Advanced Event Tracking Workshop</h3>
+                        <p class="product-price">$149.00</p>
+                        <a href="product.html?id=prod_004" class="btn-secondary">View Details</a>
+                    </div>
+                </div>
+            </section>
+            
+            <div id="cart-notification" class="cart-notification hidden">
+                <p>Item added to cart!</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Analytics Training Demo. Built for educational purposes.</p>
+            <div class="social-links">
+                <a href="https://twitter.com" target="_blank" rel="noopener" class="external-link">Twitter</a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener" class="external-link">LinkedIn</a>
+                <a href="https://github.com" target="_blank" rel="noopener" class="external-link">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/app.js"></script>
+</body>
+</html>

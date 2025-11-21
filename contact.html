@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Analytics Demo</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <!-- Font Awesome for Cart Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    </head>
+<body>
+    <!-- HEADER REPLACED WITH UNIFIED STRUCTURE -->
+    <header class="header">
+        <div class="logo">Velvet &amp; Sage Lab</div>
+        <div class="header-right">
+            <nav class="nav">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="shop.html">Shop</a>
+                <a href="resources.html">Resources</a>
+                <a href="contact.html" class="active">Contact</a>
+            </nav>
+            <!-- CART ICON ADDED -->
+            <a href="checkout.html" class="cart-icon" id="cart-nav-icon" title="View Cart">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count" id="nav-cart-count">0</span>
+            </a>
+        </div>
+    </header>
+    <!-- END HEADER -->
+
+    <main class="page-content">
+        <div class="container">
+            <h1>Contact Us</h1>
+            
+            <div class="contact-layout">
+                <div class="contact-form-section">
+                    <h2>Send us a message</h2>
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="company">Company</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Select a subject</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="training">Training Question</option>
+                                <option value="technical">Technical Support</option>
+                                <option value="partnership">Partnership</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="newsletter-opt-in" name="newsletter">
+                                Subscribe to our newsletter
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary">Send Message</button>
+                    </form>
+                </div>
+                
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p>This is a training demo site. In a real implementation, you'd track:</p>
+                    <ul>
+                        <li>Form submissions</li>
+                        <li>Field interactions</li>
+                        <li>Validation errors</li>
+                        <li>Completion time</li>
+                        <li>Opt-in selections</li>
+                    </ul>
+                    
+                    <div class="info-block">
+                        <h4>Practice Exercises</h4>
+                        <p>Try creating GTM triggers for:</p>
+                        <ul>
+                            <li>Form submission event</li>
+                            <li>Tracking which subject is most popular</li>
+                            <li>Newsletter opt-in rate</li>
+                            <li>Form abandonment (advanced)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Analytics Training Demo. Built for educational purposes.</p>
+            <div class="social-links">
+                <a href="https://twitter.com" target="_blank" rel="noopener" class="external-link">Twitter</a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener" class="external-link">LinkedIn</a>
+                <a href="https://github.com" target="_blank" rel="noopener" class="external-link">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/app.js"></script>
+</body>
+</html>
